@@ -1,3 +1,4 @@
+
 //Start the game
 function createUser()
 {
@@ -10,9 +11,11 @@ function createUser()
 }
 	//Display story line
 	document.getElementById("outputDiv").innerHTML =
+	"What would you like to do first?" +
+	"<br>" +
 	"Hello " + user.name + ", you have started your first day at Marist College!" +
 	" You are starting your first year in " + user.dorm + "." +
-	" You have made it through the entire semister and now you only have " + 
+	" You have made it through the entire semester and now you only have " + 
 	user.day + " days until finals, Good luck!";
 	//Hide Input
 	document.getElementById("inputDiv").style.display="none"
@@ -52,4 +55,8 @@ function back()
 	document.getElementById("buttonDiv").style.display="block"
 	//Hide Eat
 		document.getElementById("eatDiv").style.display="none"
+	//Show Buttons
+	document.getElementById("buttonDiv").style.display="block"
+	//Hide Study
+		document.getElementById("studyDiv").style.display="none"
 }
