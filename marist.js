@@ -48,15 +48,29 @@ function userStudy()
 	//Show Eat
 	document.getElementById("studyDiv").style.display="block"
 }
+//Send the user to CLUB
+function userClub()
+{
+	//Display story line
+	document.getElementById("outputDiv").innerHTML =
+	"Where would you like to go?" +
+	"<br><br>" + document.getElementById("outputDiv").innerHTML
+	//Hide Buttons
+	document.getElementById("buttonDiv").style.display="none"
+	//Show Club
+	document.getElementById("clubDiv").style.display="block"
+}
 //Return to Menu
 function back()
 {
 	//Show Buttons
 	document.getElementById("buttonDiv").style.display="block"
 	//Hide Eat
-		document.getElementById("eatDiv").style.display="none"
+	document.getElementById("eatDiv").style.display="none"
 	//Show Buttons
 	document.getElementById("buttonDiv").style.display="block"
 	//Hide Study
-		document.getElementById("studyDiv").style.display="none"
+	document.getElementById("studyDiv").style.display="none"
+	//Hide Study
+	document.getElementById("clubDiv").style.display="none"
 }
