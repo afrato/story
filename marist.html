@@ -4,6 +4,8 @@
 <title>Marist Game</title>
   <meta charset="UTF-8">
   <script type="text/javascript" src="marist.js"></script>
+  <script type="text/javascript" src="eat.js"></script>
+  <script type="text/javascript" src="study.js"></script>
 </head>
 <body>
 
@@ -19,7 +21,26 @@
     <br>
     <button onclick="createUser();">Begin School</button>
   </div>
-
+  
+  <div id="buttonDiv" style="display:none">
+  <button onclick="userEat();">Eat</button>
+  <button onclick="userStudy();">Study</button>
+  </div>
+  
+  <div id="eatDiv" style="display:none">
+  <button onclick="hall();">Dining Hall</button>
+  <button onclick="cab();">Caberet</button>
+  <button onclick="apple();">Applebees</button>
+  <br>
+  <button onclick="back();">Back</button>
+  </div>
+  
+  <div id="studyDiv" style="display:none">
+  <button onclick="room();">Your room</button>
+  <button onclick="sFriends();">Study with friends</button>
+  <button onclick="library();">Library</button>
+  </div>
+  
   <div id="outputDiv" style="display:none"></div>
 </body>
 </html>
