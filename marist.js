@@ -53,7 +53,7 @@ function userClass()
 {
 	//Display story line
 	document.getElementById("outputDiv").innerHTML =
-	"Would you like to attend class?" +
+	"What class would you like to attend?" +
 	"<br><br>" + document.getElementById("outputDiv").innerHTML
 	//Hide Buttons
 	document.getElementById("buttonDiv").style.display="none"
@@ -72,4 +72,8 @@ function back()
 	document.getElementById("buttonDiv").style.display="block"
 	//Hide Study
 		document.getElementById("studyDiv").style.display="none"
+	//Show Buttons
+	document.getElementById("buttonDiv").style.display="block"
+	//Hide Class
+	document.getElementById("classDiv").style.display="none"
 }
