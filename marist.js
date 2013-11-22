@@ -61,7 +61,20 @@ function userClass()
 	document.getElementById("classDiv").style.display="block"
 }
 
-//Return to Menu
+//Send the user to HANG WITH FRIENDS
+function userFriends()
+{
+	//Display story line
+	document.getElementById("outputDiv").innerHTML =
+	"Where would you like to go to hang out with friends?" +
+	"<br><br>" + document.getElementById("outputDiv").innerHTML
+	//Hide Buttons
+	document.getElementById("buttonDiv").style.display="none"
+	//Show Hang with friends
+	document.getElementById("friendsDiv").style.display="block"
+}
+	
+	//Return to Menu
 function back()
 {
 	//Show Buttons
