@@ -73,6 +73,19 @@ function userFriends()
 	//Show Hang with friends
 	document.getElementById("friendsDiv").style.display="block"
 }
+
+//Send the user to play VIDEO GAMES
+function userGames()
+{
+	//Display story line
+	document.getElementById("outputDiv").innerHTML =
+	"Where would you like to go to play video games?" +
+	"<br><br>" + document.getElementById("outputDiv").innerHTML
+	//Hide Buttons
+	document.getElementById("buttonDiv").style.display="none"
+	//Show Hang with friends
+	document.getElementById("vidgameDiv").style.display="block"
+}
 	
 	//Return to Menu
 function back()
