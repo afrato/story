@@ -87,6 +87,18 @@ function userGames()
 	document.getElementById("vidgameDiv").style.display="block"
 }
 	
+//Send the user to the GYM
+function userGym()
+{
+	//Display story line
+	document.getElementById("outputDiv").innerHTML =
+	"How long would you like to go to the gym for?" +
+	"<br><br>" + document.getElementById("outputDiv").innerHTML
+	//Hide Buttons
+	document.getElementById("buttonDiv").style.display="none"
+	//Show gym
+	document.getElementById("gymDiv").style.display="block"
+}	
 	//Return to Menu
 function back()
 {
