@@ -45,7 +45,7 @@ function userStudy()
 	"<br><br>" + document.getElementById("outputDiv").innerHTML
 	//Hide Buttons
 	document.getElementById("buttonDiv").style.display="none"
-	//Show Eat
+	//Show Study
 	document.getElementById("studyDiv").style.display="block"
 }
 //Send the user to CLUB
@@ -60,6 +60,19 @@ function userClub()
 	//Show Club
 	document.getElementById("clubDiv").style.display="block"
 }
+//Send the user to CLASS
+function userClass()
+{
+	//Display story line
+	document.getElementById("outputDiv").innerHTML =
+	"Would you like to attend class?" +
+	"<br><br>" + document.getElementById("outputDiv").innerHTML
+	//Hide Buttons
+	document.getElementById("buttonDiv").style.display="none"
+	//Show Eat
+	document.getElementById("classDiv").style.display="block"
+}
+
 //Return to Menu
 function back()
 {
