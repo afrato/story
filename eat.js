@@ -39,4 +39,7 @@ function apple()
 	document.getElementById("buttonDiv").style.display="block"
 	//Hide Eat
 	document.getElementById("eatDiv").style.display="none"
+	
+	//add 4 points
+	var apple = 4
 }
