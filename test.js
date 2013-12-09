@@ -1,30 +1,36 @@
 var score = 0;
 var totalscore = 0;
-var limit = 5;
 var day = 1;
 var totalday = 0;
+var x = 0;
 
 function counterA()
 {
-	if(score>=limit)
+	if(x>=5)
 	{
-		alert("Today is day " + day + "." + " You have reach the daily score limit of " + limit + ".");
-		day++;	
-		if(day>=totalday)
+		alert("Today is day " + day + "." + " You have done " + totalday + " activities today.");	
+		if(day>=x)
 		{
-			alert("You have reached finals. Your total score is " + totalscore = ".");
+			alert("You have reached finals. Your total score is " + totalscore + ".");
 		}
-		totalscore = score*day;
 	} 
-	else if(score<=limit)
+	else if(x<=5)
 	{
-		alert("Today is day " + day + "." + " The score it at " + score + ".");
+		alert("Today is day " + day + "." + " You have done " + score + " activities today out of 5.");
 	}
 }
 function getTotalScore()
 {
-	alert("Your total score is " + totalscore + ".");
-}
+	if(day>=x)
+	{
+		alert("You have reached finals. Your total score is " + totalscore + ".");
+	}
+	else
+	{
+		alert("Your total score is " + totalscore + ".");
+	}
+} 
+
 
 
 var test = 1;
@@ -39,7 +45,7 @@ function createUser()
 	dorm: document.getElementById("dormBox").value,
 	day: document.getElementById("dayBox").value,
 	}
-	totalday = document.getElementById("dayBox").value + 1;
+	totalday = document.getElementById("dayBox").value;
 	//Display story line
 	document.getElementById("outputDiv").innerHTML =
 	"What would you like to do first?" +
@@ -66,17 +72,16 @@ function userEat()
 	document.getElementById("buttonDiv").style.display="none"
 	//Show Eat
 	document.getElementById("eatDiv").style.display="block"
-	 
-	if(score>=limit)
+	if(score>=totalday)
 	{
-		alert("Today is day " + day + "." + " You have reach the daily score limit of " + limit + ".");
-		day++;	
-		totalscore = score*day;
+		day++;
+		alert("Today is day " + day + "." + " You have reach the daily score of " + totalday + ".");
+		totalscore = totalscore + score;
 				score = 0;
 	} 
 	if(day>=totalday)
 	{
-		alert("You have reached finals.");
+		alert("You have reached finals. Your total score is " + totalscore + ".");
 	}
 }
 //Send the user to STUDY
@@ -90,17 +95,17 @@ function userStudy()
 	document.getElementById("buttonDiv").style.display="none"
 	//Show Study
 	document.getElementById("studyDiv").style.display="block"
-	 
-	if(score>=limit)
+	if(score>=totalday)
 	{
-		alert("Today is day " + day + "." + " You have reach the daily score limit of " + limit + ".");
-		day++;	
-		totalscore = score*day;
+		day++;
+		alert("Today is day " + day + "." + " You have reach the daily score of " + totalday + ".");
+
+		totalscore = totalscore + score;
 				score = 0;
 	} 
 	if(day>=totalday)
 	{
-		alert("You have reached finals.");
+		alert("You have reached finals. Your total score is " + totalscore + ".");
 	}
 }
 //Send the user to CLUB
@@ -114,17 +119,18 @@ function userClub()
 	document.getElementById("buttonDiv").style.display="none"
 	//Show Club
 	document.getElementById("clubDiv").style.display="block"
-	 
-	if(score>=limit)
+
+	if(score>=totalday)
 	{
-		alert("Today is day " + day + "." + " You have reach the daily score limit of " + limit + ".");
-		day++;	
-		totalscore = score*day;
+		day++; 
+		alert("Today is day " + day + "." + " You have reach the daily score of " + totalday + ".");
+
+		totalscore = totalscore + score;
 				score = 0;
 	} 
 	if(day>=totalday)
 	{
-		alert("You have reached finals.");
+		alert("You have reached finals. Your total score is " + totalscore + ".");
 	}
 }
 //Send the user to CLASS
@@ -139,16 +145,17 @@ function userClass()
 	//Show Eat
 	document.getElementById("classDiv").style.display="block"
 
-	if(score>=limit)
+	if(score>=totalday)
 	{
-		alert("Today is day " + day + "." + " You have reach the daily score limit of " + limit + ".");
 		day++;	
-		totalscore = score*day;
+		alert("Today is day " + day + "." + " You have reached day " + totalday + ".");
+		
+		totalscore = totalscore + score;
 				score = 0;
 	} 
 	if(day>=totalday)
 	{
-		alert("You have reached finals.");
+		alert("You have reached finals. Your total score is " + totalscore + ".");
 	}
 }
 
@@ -170,17 +177,18 @@ function back()
 	document.getElementById("studyDiv").style.display="none"
 	//Hide Study
 	document.getElementById("clubDiv").style.display="none"
-	score--;
+		score--;
+	x++;
 	 
-	if(score>=limit)
+	if(score>=totalday)
 	{
-		alert("You have reached the limit of " + limit + ".");	
+		alert("You have reached day " + totalday + ".");	
 		day++;
-				score = 0;
+		score = 0;
 	} 
 	if(day>=totalday)
 	{
-		alert("You have reached finals.");
+		alert("You have reached finals. Your total score is " + totalscore + ".");
 	}
 }
 //Send the user to HANG WITH FRIENDS
@@ -194,16 +202,16 @@ function userFriends()
 	document.getElementById("buttonDiv").style.display="none"
 	//Show Hang with friends
 	document.getElementById("friendsDiv").style.display="block"
-	 
-	if(score>=limit)
+
+	if(score>=totalday)
 	{
-		alert("You have reached the limit of " + limit + ".");	
-		day++;
-				score = 0;
+		day++; 
+		alert("You have reached day " + day + ".");	
+		score = 0;
 	} 
 	if(day>=totalday)
 	{
-		alert("You have reached finals.");
+		alert("You have reached finals. Your total score is " + totalscore + ".");
 	}
 }
 //can take part in 5 activities per day
@@ -234,16 +242,20 @@ function mathClass()
 	document.getElementById("buttonDiv").style.display="block"
 	//Hide Study
 	document.getElementById("classDiv").style.display="none"
-	score++;
-	if(score>=limit)
+		score++;
+	x++;
+
+	
+	if(score>=totalday)
 	{
-		alert("You have reached the limit of " + limit + ".");	
 		day++;
-				score = 0;
+		alert("You have reached day " + day + ".");	
+
+		score = 0;
 	} 
 	if(day>=totalday)
 	{
-		alert("You have reached finals.");
+		alert("You have reached finals. Your total score is " + totalscore + ".");
 	}
 }
 
@@ -261,16 +273,20 @@ function engClass()
 	document.getElementById("buttonDiv").style.display="block"
 	//Hide Study
 	document.getElementById("classDiv").style.display="none"
-	score++;
-	if(score>=limit)
+		score++;
+	x++;
+
+	if(score>=totalday)
 	{
-		alert("You have reached the limit of " + limit + ".");	
 		day++;
-				score = 0;
+		alert("You have reached day " + day + ".");	
+		totalscore = totalscore + score;
+		score = 0;
 	} 
 	if(day>=totalday)
 	{
-		alert("You have reached finals.");
+		totalscore = totalscore + score;
+		alert("You have reached finals. Your total score is " + totalscore + ".");
 	}
 }
 
@@ -287,17 +303,21 @@ function sciClass()
 	//Show Buttons
 	document.getElementById("buttonDiv").style.display="block"
 	//Hide Study
-	document.getElementById("classDiv").style.display="none"
+	documenst.getElementById("classDiv").style.display="none"
 	score++;
-	if(score>=limit)
+	x++;
+
+	if(score>=totalday)
 	{
-		alert("You have reached the limit of " + limit + ".");	
 		day++;
-				score = 0;
+		alert("You have reached day " + day + ".");	
+		totalscore = totalscore + score;
+		score = 0;
 	} 
 	if(day>=totalday)
 	{
-		alert("You have reached finals.");
+		totalscore = totalscore + score;
+		alert("You have reached finals. Your total score is " + totalscore + ".");
 	}
 }
 
@@ -314,16 +334,20 @@ function soccer()
 	document.getElementById("buttonDiv").style.display="block"
 	//Hide Club
 	document.getElementById("clubDiv").style.display="none"
-	score++;
-	if(score>=limit)
+		score++;
+	x++;
+
+	if(score>=totalday)
 	{
-		alert("You have reached the limit of " + limit + ".");	
 		day++;
-				score = 0;
+		alert("You have reached day " + day + ".");	
+		totalscore = totalscore + score;
+		score = 0;
 	} 
 	if(day>=totalday)
 	{
-		alert("You have reached finals.");
+		totalscore = totalscore + score;
+		alert("You have reached finals. Your total score is " + totalscore + ".");
 	}
 }
 
@@ -341,15 +365,16 @@ function ministry()
 	//Hide Club
 	document.getElementById("clubDiv").style.display="none"
 	score++;
-	if(score>=limit)
+	x++;
+
+	if(score>=totalday)
 	{
-		alert("You have reached the limit of " + limit + ".");	
-		day++;
-				score = 0;
+		day++; alert("You have reached day " + day + ".");	
+		score = 0;
 	} 
 	if(day>=totalday)
 	{
-		alert("You have reached finals.");
+		alert("You have reached finals. Your total score is " + totalscore + ".");
 	}
 }
 function computer()
@@ -365,16 +390,20 @@ function computer()
 	document.getElementById("buttonDiv").style.display="block"
 	//Hide Club
 	document.getElementById("clubDiv").style.display="none"
-	score++;
-	if(score>=limit)
+		score++;
+	x++;
+
+	if(score>=totalday)
 	{
-		alert("You have reached the limit of " + limit + ".");	
-		day++;	
-			score = 0;
+		day++;
+		alert("You have reached day " + day + ".");	
+		totalscore = totalscore + score;
+		score = 0;
 	} 
 	if(day>=totalday)
 	{
-		alert("You have reached finals.");
+		totalscore = totalscore + score;
+		alert("You have reached finals. Your total score is " + totalscore + ".");
 	}
 }
 
@@ -391,15 +420,18 @@ function hall()
 	document.getElementById("buttonDiv").style.display="block"
 	//Hide Eat
 	document.getElementById("eatDiv").style.display="none"
-	if(score>=limit)
+	x++;
+	if(score>=totalday)
 	{
-		alert("You have reached the limit of " + limit + ".");	
 		day++;
-				score = 0;
+		alert("You have reached day " + day + ".");	
+		totalscore = totalscore + score;
+		score = 0;
 	} 
 	if(day>=totalday)
 	{
-		alert("You have reached finals.");
+		totalscore = totalscore + score;
+		alert("You have reached finals. Your total score is " + totalscore + ".");
 	}
 }
 function cab()
@@ -415,15 +447,18 @@ function cab()
 	document.getElementById("buttonDiv").style.display="block"
 	//Hide Eat
 	document.getElementById("eatDiv").style.display="none"
-	if(score>=limit)
+x++;
+	if(score>=totalday)
 	{
-		alert("You have reached the limit of " + limit + ".");	
 		day++;
-				score = 0;
+		alert("You have reached day " + day + ".");	
+		totalscore = totalscore + score;
+		score = 0;
 	} 
 	if(day>=totalday)
 	{
-		alert("You have reached finals.");
+		totalscore = totalscore + score;
+		alert("You have reached finals. Your total score is " + totalscore + ".");
 	}
 }
 function apple()
@@ -439,19 +474,21 @@ function apple()
 	document.getElementById("buttonDiv").style.display="block"
 	//Hide Eat
 	document.getElementById("eatDiv").style.display="none"
-	
+	x++;
 	//add 4 points
 	var apple = 4
-	score++;
-	if(score>=limit)
+
+	if(score>=totalday)
 	{
-		alert("You have reached the limit of " + limit + ".");	
 		day++;
-				score = 0;
+		alert("You have reached day " + day + ".");	
+		totalscore = totalscore + score;
+		score = 0;
 	} 
 	if(day>=totalday)
 	{
-		alert("You have reached finals.");
+		totalscore = totalscore + score;
+		alert("You have reached finals. Your total score is " + totalscore + ".");
 	}
 }
 
@@ -469,16 +506,19 @@ function friendsDorm()
 	document.getElementById("buttonDiv").style.display="block"
 	//Hide Hang with friends
 	document.getElementById("friendsDiv").style.display="none"
-	score--;
-	if(score>=limit)
+		score--;
+	x++;
+	if(score>=totalday)
 	{
-		alert("You have reached the limit of " + limit + ".");	
 		day++;
-				score = 0;
+		alert("You have reached day " + day + ".");	
+		totalscore = totalscore + score;
+		score = 0;
 	} 
 	if(day>=totalday)
 	{
-		alert("You have reached finals.");
+		totalscore = totalscore + score;
+		alert("You have reached finals. Your total score is " + totalscore + ".");
 	}
 }
 
@@ -496,16 +536,19 @@ function theGreen()
 	document.getElementById("buttonDiv").style.display="block"
 	//Hide Hang with friends
 	document.getElementById("friendsDiv").style.display="none"
-	score--;
-	if(score>=limit)
+		score--;
+	x++;
+	if(score>=totalday)
 	{
-		alert("You have reached the limit of " + limit + ".");	
 		day++;
-				score = 0;
+		alert("You have reached day " + day + ".");	
+		totalscore = totalscore + score;
+		score = 0;
 	} 
 	if(day>=totalday)
 	{
-		alert("You have reached finals.");
+		totalscore = totalscore + score;
+		alert("You have reached finals. Your total score is " + totalscore + ".");
 	}
 }
 
@@ -523,16 +566,19 @@ function riverSide()
 	document.getElementById("buttonDiv").style.display="block"
 	//Hide Hang with Friends
 	document.getElementById("friendsDiv").style.display="none"
-	score--;
-	if(score>=limit)
+		score--;
+	x++;
+	if(score>=totalday)
 	{
-		alert("You have reached the limit of " + limit + ".");	
 		day++;
-				score = 0;
+		alert("You have reached day " + day + ".");	
+		totalscore = totalscore + score;
+		score = 0;
 	} 
 	if(day>=totalday)
 	{
-		alert("You have reached finals.");
+		totalscore = totalscore + score;
+		alert("You have reached finals. Your total score is " + totalscore + ".");
 	}
 }
 
@@ -549,16 +595,20 @@ function room()
 	document.getElementById("buttonDiv").style.display="block"
 	//Hide Study
 	document.getElementById("studyDiv").style.display="none"
-	score++;
-	if(score>=limit)
+		score++;
+	x++;
+
+	if(score>=totalday)
 	{
-		alert("You have reached the limit of " + limit + ".");	
 		day++;
-				score = 0;
+		alert("You have reached day " + day + ".");	
+		totalscore = totalscore + score;
+		score = 0;
 	} 
 	if(day>=totalday)
 	{
-		alert("You have reached finals.");
+		totalscore = totalscore + score;
+		alert("You have reached finals. Your total score is " + totalscore + ".");
 	}
 }
 function sFriends()
@@ -574,16 +624,20 @@ function sFriends()
 	document.getElementById("buttonDiv").style.display="block"
 	//Hide Study
 	document.getElementById("studyDiv").style.display="none"
-	score++;
-	if(score>=limit)
+		score++;
+	x++;
+
+	if(score>=totalday)
 	{
-		alert("You have reached the limit of " + limit + ".");	
 		day++;
-				score = 0;
+		alert("You have reached day " + day + ".");	
+		totalscore = totalscore + score;
+		score = 0;
 	} 
 	if(day>=totalday)
 	{
-		alert("You have reached finals.");
+		totalscore = totalscore + score;
+		alert("You have reached finals. Your total score is " + totalscore + ".");
 	}
 }
 function sFriends()
@@ -599,16 +653,20 @@ function sFriends()
 	document.getElementById("buttonDiv").style.display="block"
 	//Hide Study
 	document.getElementById("studyDiv").style.display="none"
-	score++;
-	if(score>=limit)
+		score++;
+	x++;
+
+	if(score>=totalday)
 	{
-		alert("You have reached the limit of " + limit + ".");	
 		day++;
-				score = 0;
+		alert("You have reached day " + day + ".");	
+		totalscore = totalscore + score;
+		score = 0;
 	} 
 	if(day>=totalday)
 	{
-		alert("You have reached finals.");
+		totalscore = totalscore + score;
+		alert("You have reached finals. Your total score is " + totalscore + ".");
 	}
 }
 
@@ -625,15 +683,16 @@ function library()
 	document.getElementById("buttonDiv").style.display="block"
 	//Hide Study
 	document.getElementById("studyDiv").style.display="none"
-	score++;
-	if(score>=limit)
+		score++;
+	x++;
+
+	if(score>=totalday)
 	{
-		alert("You have reached the limit of " + limit + ".");	
-		day++;
-				score = 0;
+		day++; alert("You have reached day " + day + ".");	
+		score = 0;
 	} 
 	if(day>=totalday)
 	{
-		alert("You have reached finals.");
+		alert("You have reached finals. Your total score is " + totalscore + ".");
 	}
 }
