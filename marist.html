@@ -1,0 +1,98 @@
+<script src="test.js" type="text/javascript" charset="utf-8"></script>
+<!doctype HTML>
+<html>
+<head>
+
+<title>Marist Game</title>
+  <meta charset="UTF-8">
+  <!-- <script type="text/javascript" src="marist.js"></script>  <script type="text/javascript" src="eat.js"></script>
+  <script type="text/javascript" src="study.js"></script>
+  <script type="text/javascript" src="club.js"></script>
+  <script type="text/javascript" src="class.js"></script>
+  <script type="text/javascript" src="hangwithfriends.js"></script> -->
+	  <script type="text/javascript" src = "test.js"></script>
+</head>
+<body>
+
+<button onclick="counterA()">Click for day and score.</button> 
+<button onclick="getTotalScore()">Click for your total score.</button>
+
+ <div id="inputDiv">
+  <p>Welcome to Marist College</p>
+    <p>Enter your academic profile:</p>
+    <label for="nameBox">Name:</label>
+    <input type="text" id="nameBox">
+    <label for="dormBox">Dorm:</label>
+    <input type="text" id="dormBox">
+    <label for="dayBox">Days until finals:</label>
+    <input type="text" id="dayBox">
+    <br>
+    <button onclick="createUser();">Begin School</button>
+  </div>
+  
+  <div id="buttonDiv" style="display:none">
+  <button onclick="userEat();">Eat</button>
+  <button onclick="userStudy();">Study</button>
+  <button onclick="userClub();">Club/Activity</button>
+  <button onclick="userClass();">Attend Class</button>
+  <button onclick="userFriends();">Hang with Friends</button>
+  </div>
+  
+  <div id="eatDiv" style="display:none">
+  <button onclick="hall();">Dining Hall</button>
+  <button onclick="cab();">Caberet</button>
+  <button onclick="apple();">Applebees</button>
+  <br>
+  <button onclick="back();">Back</button>
+  </div>
+  
+  <div id="studyDiv" style="display:none">
+  <button onclick="room();">Your room</button>
+  <button onclick="sFriends();">Study with friends</button>
+  <button onclick="library();">Library</button>
+  <br>
+  <button onclick="back();">Back</button>
+  </div>
+  
+  <div id="clubDiv" style="display:none">
+  <button onclick="soccer();">Soccer</button>
+  <button onclick="ministry();">Campus Ministry</button>
+  <button onclick="computer();">Computer Society</button>
+  </div>
+  <div id="classDiv" style="display:none">
+  <button onclick="mathClass();">Math Class</button>
+  <button onclick="engClass();">English Class</button>
+  <button onclick="sciClass();">Science Class</button>
+  <br>
+  <button onclick="back();">Back</button>
+  </div>
+  
+  <div id="friendsDiv" style="display:none">
+  <button onclick="friendsDorm();">Friend's Dorm Room</button>
+  <button onclick="theGreen();">Campus Green</button>
+  <button onclick="riverSide();">By the River</button>
+  <br>
+  <button onclick="back();">Back</button>
+  </div>
+  
+  <div id="vidgameDiv" style="display:none">
+  <button onclick="yourRoom();">Your Room</button>
+  <button onclick="friendsRoom();">Your Friend's Room</button>
+  <br>
+  <button onclick="back();">Back</button>
+  </div>
+  
+  <div id="gymDiv" style="display:none">
+  <button onclick="oneHour();">Go for 1 hour</button>
+  <button onclick="twoHour();">Go for 2 hours</button>
+  <button onclick="threeHour();">Go for 3 hours</button>
+  <br>
+  <button onclick="back();">Back</button>
+  </div> 
+  
+  <div id="timeDiv">
+  </div>
+    
+  <div id="outputDiv" style="display:none"></div>
+</body>
+</html>
