@@ -18,7 +18,7 @@ function sFriends()
 	document.getElementById("outputDiv").innerHTML =
 	" What would you like to do?" +
 	"<br> You worked on homework with your friends for 4 hours." +
-	"<br><br>" + document.getElementById("outputDiv").innerHTML;
+	6"<br><br>" + document.getElementById("outputDiv").innerHTML;
 	//Show Output
 	document.getElementById("outputDiv").style.display="block"
 	//Show Buttons
