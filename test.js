@@ -16,13 +16,14 @@ function counterA()
 	} 
 	else if(x<=5)
 	{
-		alert("Today is day " + day + "." + " You have done " + score + " activities today out of 5.");
+		alert("Today is day " + day + "." + " You have done " + x + " activities today out of 5.");
 	}
 }
 function getTotalScore()
 {
-	if(day>=x)
+	if(day>=totalday)
 	{
+		totalscore = totalscore + score;
 		alert("You have reached finals. Your total score is " + totalscore + ".");
 	}
 	else
@@ -72,7 +73,8 @@ function userEat()
 	document.getElementById("buttonDiv").style.display="none"
 	//Show Eat
 	document.getElementById("eatDiv").style.display="block"
-	if(score>=totalday)
+
+	if(score>=totalscore)
 	{
 		day++;
 		alert("Today is day " + day + "." + " You have reach the daily score of " + totalday + ".");
@@ -81,6 +83,7 @@ function userEat()
 	} 
 	if(day>=totalday)
 	{
+		totalscore = totalscore + score;
 		alert("You have reached finals. Your total score is " + totalscore + ".");
 	}
 }
@@ -95,16 +98,17 @@ function userStudy()
 	document.getElementById("buttonDiv").style.display="none"
 	//Show Study
 	document.getElementById("studyDiv").style.display="block"
-	if(score>=totalday)
+
+	if(score>=totalscore)
 	{
 		day++;
 		alert("Today is day " + day + "." + " You have reach the daily score of " + totalday + ".");
-
 		totalscore = totalscore + score;
 				score = 0;
 	} 
 	if(day>=totalday)
 	{
+		totalscore = totalscore + score;
 		alert("You have reached finals. Your total score is " + totalscore + ".");
 	}
 }
@@ -120,16 +124,16 @@ function userClub()
 	//Show Club
 	document.getElementById("clubDiv").style.display="block"
 
-	if(score>=totalday)
+	if(score>=totalscore)
 	{
-		day++; 
+		day++;
 		alert("Today is day " + day + "." + " You have reach the daily score of " + totalday + ".");
-
 		totalscore = totalscore + score;
 				score = 0;
 	} 
 	if(day>=totalday)
 	{
+		totalscore = totalscore + score;
 		alert("You have reached finals. Your total score is " + totalscore + ".");
 	}
 }
@@ -145,16 +149,16 @@ function userClass()
 	//Show Eat
 	document.getElementById("classDiv").style.display="block"
 
-	if(score>=totalday)
+	if(score>=totalscore)
 	{
-		day++;	
-		alert("Today is day " + day + "." + " You have reached day " + totalday + ".");
-		
+		day++;
+		alert("Today is day " + day + "." + " You have reach the daily score of " + totalday + ".");
 		totalscore = totalscore + score;
 				score = 0;
 	} 
 	if(day>=totalday)
 	{
+		totalscore = totalscore + score;
 		alert("You have reached finals. Your total score is " + totalscore + ".");
 	}
 }
@@ -177,10 +181,10 @@ function back()
 	document.getElementById("studyDiv").style.display="none"
 	//Hide Study
 	document.getElementById("clubDiv").style.display="none"
-		score--;
+	score--;
 	x++;
 	 
-	if(score>=totalday)
+	if(day>=totalscore)
 	{
 		alert("You have reached day " + totalday + ".");	
 		day++;
@@ -188,6 +192,7 @@ function back()
 	} 
 	if(day>=totalday)
 	{
+		totalscore = totalscore + score;
 		alert("You have reached finals. Your total score is " + totalscore + ".");
 	}
 }
@@ -203,14 +208,16 @@ function userFriends()
 	//Show Hang with friends
 	document.getElementById("friendsDiv").style.display="block"
 
-	if(score>=totalday)
+	if(score>=totalscore)
 	{
-		day++; 
-		alert("You have reached day " + day + ".");	
-		score = 0;
+		day++;
+		alert("Today is day " + day + "." + " You have reach the daily score of " + totalday + ".");
+		totalscore = totalscore + score;
+				score = 0;
 	} 
 	if(day>=totalday)
 	{
+		totalscore = totalscore + score;
 		alert("You have reached finals. Your total score is " + totalscore + ".");
 	}
 }
@@ -242,19 +249,18 @@ function mathClass()
 	document.getElementById("buttonDiv").style.display="block"
 	//Hide Study
 	document.getElementById("classDiv").style.display="none"
-		score++;
+	score++;
 	x++;
-
-	
-	if(score>=totalday)
+	if(score>=totalscore)
 	{
 		day++;
-		alert("You have reached day " + day + ".");	
-
-		score = 0;
+		alert("Today is day " + day + "." + " You have reach the daily score of " + totalday + ".");
+		totalscore = totalscore + score;
+				score = 0;
 	} 
 	if(day>=totalday)
 	{
+		totalscore = totalscore + score;
 		alert("You have reached finals. Your total score is " + totalscore + ".");
 	}
 }
@@ -273,15 +279,14 @@ function engClass()
 	document.getElementById("buttonDiv").style.display="block"
 	//Hide Study
 	document.getElementById("classDiv").style.display="none"
-		score++;
+	score++;
 	x++;
-
-	if(score>=totalday)
+	if(score>=totalscore)
 	{
 		day++;
-		alert("You have reached day " + day + ".");	
+		alert("Today is day " + day + "." + " You have reach the daily score of " + totalday + ".");
 		totalscore = totalscore + score;
-		score = 0;
+				score = 0;
 	} 
 	if(day>=totalday)
 	{
@@ -303,16 +308,15 @@ function sciClass()
 	//Show Buttons
 	document.getElementById("buttonDiv").style.display="block"
 	//Hide Study
-	documenst.getElementById("classDiv").style.display="none"
+	document.getElementById("classDiv").style.display="none"
 	score++;
 	x++;
-
-	if(score>=totalday)
+	if(score>=totalscore)
 	{
 		day++;
-		alert("You have reached day " + day + ".");	
+		alert("Today is day " + day + "." + " You have reach the daily score of " + totalday + ".");
 		totalscore = totalscore + score;
-		score = 0;
+				score = 0;
 	} 
 	if(day>=totalday)
 	{
@@ -334,15 +338,14 @@ function soccer()
 	document.getElementById("buttonDiv").style.display="block"
 	//Hide Club
 	document.getElementById("clubDiv").style.display="none"
-		score++;
+	score++;
 	x++;
-
-	if(score>=totalday)
+	if(score>=totalscore)
 	{
 		day++;
-		alert("You have reached day " + day + ".");	
+		alert("Today is day " + day + "." + " You have reach the daily score of " + totalday + ".");
 		totalscore = totalscore + score;
-		score = 0;
+				score = 0;
 	} 
 	if(day>=totalday)
 	{
@@ -366,14 +369,16 @@ function ministry()
 	document.getElementById("clubDiv").style.display="none"
 	score++;
 	x++;
-
-	if(score>=totalday)
+	if(score>=totalscore)
 	{
-		day++; alert("You have reached day " + day + ".");	
-		score = 0;
+		day++;
+		alert("Today is day " + day + "." + " You have reach the daily score of " + totalday + ".");
+		totalscore = totalscore + score;
+				score = 0;
 	} 
 	if(day>=totalday)
 	{
+		totalscore = totalscore + score;
 		alert("You have reached finals. Your total score is " + totalscore + ".");
 	}
 }
@@ -390,15 +395,14 @@ function computer()
 	document.getElementById("buttonDiv").style.display="block"
 	//Hide Club
 	document.getElementById("clubDiv").style.display="none"
-		score++;
+	score++;
 	x++;
-
-	if(score>=totalday)
+	if(score>=totalscore)
 	{
 		day++;
-		alert("You have reached day " + day + ".");	
+		alert("Today is day " + day + "." + " You have reach the daily score of " + totalday + ".");
 		totalscore = totalscore + score;
-		score = 0;
+				score = 0;
 	} 
 	if(day>=totalday)
 	{
@@ -420,13 +424,14 @@ function hall()
 	document.getElementById("buttonDiv").style.display="block"
 	//Hide Eat
 	document.getElementById("eatDiv").style.display="none"
+	score++;
 	x++;
-	if(score>=totalday)
+	if(score>=totalscore)
 	{
 		day++;
-		alert("You have reached day " + day + ".");	
+		alert("Today is day " + day + "." + " You have reach the daily score of " + totalday + ".");
 		totalscore = totalscore + score;
-		score = 0;
+				score = 0;
 	} 
 	if(day>=totalday)
 	{
@@ -447,13 +452,14 @@ function cab()
 	document.getElementById("buttonDiv").style.display="block"
 	//Hide Eat
 	document.getElementById("eatDiv").style.display="none"
-x++;
-	if(score>=totalday)
+	score++;
+	x++;
+	if(score>=totalscore)
 	{
 		day++;
-		alert("You have reached day " + day + ".");	
+		alert("Today is day " + day + "." + " You have reach the daily score of " + totalday + ".");
 		totalscore = totalscore + score;
-		score = 0;
+				score = 0;
 	} 
 	if(day>=totalday)
 	{
@@ -474,16 +480,16 @@ function apple()
 	document.getElementById("buttonDiv").style.display="block"
 	//Hide Eat
 	document.getElementById("eatDiv").style.display="none"
-	x++;
 	//add 4 points
 	var apple = 4
-
-	if(score>=totalday)
+	score++;
+	x++;
+	if(score>=totalscore)
 	{
 		day++;
-		alert("You have reached day " + day + ".");	
+		alert("Today is day " + day + "." + " You have reach the daily score of " + totalday + ".");
 		totalscore = totalscore + score;
-		score = 0;
+				score = 0;
 	} 
 	if(day>=totalday)
 	{
@@ -506,16 +512,16 @@ function friendsDorm()
 	document.getElementById("buttonDiv").style.display="block"
 	//Hide Hang with friends
 	document.getElementById("friendsDiv").style.display="none"
-		score--;
+	score--;
 	x++;
-	if(score>=totalday)
+	if(day>=totalscore)
 	{
 		day++;
 		alert("You have reached day " + day + ".");	
 		totalscore = totalscore + score;
 		score = 0;
 	} 
-	if(day>=totalday)
+	if(day>=x)
 	{
 		totalscore = totalscore + score;
 		alert("You have reached finals. Your total score is " + totalscore + ".");
@@ -536,14 +542,14 @@ function theGreen()
 	document.getElementById("buttonDiv").style.display="block"
 	//Hide Hang with friends
 	document.getElementById("friendsDiv").style.display="none"
-		score--;
+	score--;
 	x++;
-	if(score>=totalday)
+	if(score>=totalscore)
 	{
 		day++;
-		alert("You have reached day " + day + ".");	
+		alert("Today is day " + day + "." + " You have reach the daily score of " + totalday + ".");
 		totalscore = totalscore + score;
-		score = 0;
+				score = 0;
 	} 
 	if(day>=totalday)
 	{
@@ -566,14 +572,14 @@ function riverSide()
 	document.getElementById("buttonDiv").style.display="block"
 	//Hide Hang with Friends
 	document.getElementById("friendsDiv").style.display="none"
-		score--;
+	score--;
 	x++;
-	if(score>=totalday)
+	if(score>=totalscore)
 	{
 		day++;
-		alert("You have reached day " + day + ".");	
+		alert("Today is day " + day + "." + " You have reach the daily score of " + totalday + ".");
 		totalscore = totalscore + score;
-		score = 0;
+				score = 0;
 	} 
 	if(day>=totalday)
 	{
@@ -595,15 +601,14 @@ function room()
 	document.getElementById("buttonDiv").style.display="block"
 	//Hide Study
 	document.getElementById("studyDiv").style.display="none"
-		score++;
+	score++;
 	x++;
-
-	if(score>=totalday)
+	if(score>=totalscore)
 	{
 		day++;
-		alert("You have reached day " + day + ".");	
+		alert("Today is day " + day + "." + " You have reach the daily score of " + totalday + ".");
 		totalscore = totalscore + score;
-		score = 0;
+				score = 0;
 	} 
 	if(day>=totalday)
 	{
@@ -624,44 +629,14 @@ function sFriends()
 	document.getElementById("buttonDiv").style.display="block"
 	//Hide Study
 	document.getElementById("studyDiv").style.display="none"
-		score++;
+	score++;
 	x++;
-
-	if(score>=totalday)
+	if(score>=totalscore)
 	{
 		day++;
-		alert("You have reached day " + day + ".");	
+		alert("Today is day " + day + "." + " You have reach the daily score of " + totalday + ".");
 		totalscore = totalscore + score;
-		score = 0;
-	} 
-	if(day>=totalday)
-	{
-		totalscore = totalscore + score;
-		alert("You have reached finals. Your total score is " + totalscore + ".");
-	}
-}
-function sFriends()
-{
-	//Display story line
-	document.getElementById("outputDiv").innerHTML =
-	" What would you like to do?" +
-	"<br> You worked on homework with your friends for 4 hours." +
-	"<br><br>" + document.getElementById("outputDiv").innerHTML;
-	//Show Output
-	document.getElementById("outputDiv").style.display="block"
-	//Show Buttons
-	document.getElementById("buttonDiv").style.display="block"
-	//Hide Study
-	document.getElementById("studyDiv").style.display="none"
-		score++;
-	x++;
-
-	if(score>=totalday)
-	{
-		day++;
-		alert("You have reached day " + day + ".");	
-		totalscore = totalscore + score;
-		score = 0;
+				score = 0;
 	} 
 	if(day>=totalday)
 	{
@@ -683,16 +658,18 @@ function library()
 	document.getElementById("buttonDiv").style.display="block"
 	//Hide Study
 	document.getElementById("studyDiv").style.display="none"
-		score++;
+	score++;
 	x++;
 
-	if(score>=totalday)
+	if(day>=totalscore)
 	{
-		day++; alert("You have reached day " + day + ".");	
+		day++; alert("You have reached day " + day + ".");
+		totalscore = totalscore + score;	
 		score = 0;
 	} 
 	if(day>=totalday)
 	{
+		totalscore = totalscore + score;
 		alert("You have reached finals. Your total score is " + totalscore + ".");
 	}
 }
