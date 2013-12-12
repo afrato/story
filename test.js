@@ -67,9 +67,8 @@ function createUser()
 function userEat()
 {	
 	//Display story line
-	document.getElementById("outputDiv").innerHTML =
-	"Where would you like to go?" +
-	"<br><br>" + document.getElementById("outputDiv").innerHTML
+	document.getElementById("questionDiv").innerHTML =
+	"Where would you like to go?" 
 	//Hide Buttons
 	document.getElementById("buttonDiv").style.display="none"
 	//Show Eat
