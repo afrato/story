@@ -62,6 +62,10 @@ function createUser()
 	document.getElementById("outputDiv").style.display="block"
 	//Show Buttons
 	document.getElementById("buttonDiv").style.display="block"
+	//Hide Input
+	document.getElementById("inputDiv").style.display="none"
+	//Show Output
+	document.getElementById("questionDiv").style.display="block"
 }
 //Send the user to EAT
 function userEat()
