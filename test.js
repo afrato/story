@@ -8,7 +8,9 @@ function counterA()
 {
 	if(x>=5)
 	{
-		alert("Today is day " + day + "." + " You have done " + totalday + " activities today.");	
+		alert("Today is day " + day + "." + " You have done " + totalday + " activities today.");
+		x++;
+		day++;
 		if(day>=x)
 		{
 			alert("You have reached finals. Your total score is " + totalscore + ".");
@@ -206,7 +208,8 @@ function userFriends()
 	if(score>=totalday)
 	{
 		day++; 
-		alert("You have reached day " + day + ".");	
+		alert("You have reached day " + day + ".");
+		totalscore = totalscore + score;
 		score = 0;
 	} 
 	if(day>=totalday)
@@ -250,7 +253,7 @@ function mathClass()
 	{
 		day++;
 		alert("You have reached day " + day + ".");	
-
+		totalscore = totalscore + score;
 		score = 0;
 	} 
 	if(day>=totalday)
