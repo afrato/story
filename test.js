@@ -1,16 +1,16 @@
 var score = 0;
+var activites = 0;
 var totalscore = 0;
 var day = 1;
 var totalday = 0;
-var x = 0;
+
 
 function counterA()
 {
-	if(x>=5)
+	if(activities>=5)
 	{
 		alert("Today is day " + day + "." + " You have done " + totalday + " activities today.");
-		x++;
-		day++;
+		
 		if(day>=x)
 		{
 			alert("You have reached finals. Your total score is " + totalscore + ".");
@@ -686,7 +686,8 @@ function library()
 	document.getElementById("buttonDiv").style.display="block"
 	//Hide Study
 	document.getElementById("studyDiv").style.display="none"
-		score++;
+		score = score + 4;
+		activities++;
 	x++;
 
 	if(score>=totalday)
