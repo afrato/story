@@ -14,13 +14,16 @@
 </head>
 <body>
 
-<p>
-<img src="marist_college.png"/>
-<p>
 
+<center>
+<img src="marist_college.png"/>
+</center>
+
+<center>
 <button onclick="counterA()">Click for day and score.</button> 
 <button onclick="getTotalScore()">Click for your total score.</button>
-<br />
+<br>
+<br>
 <button onclick="alert('Welcome to our game! Here you get to experience the stress and management of college! The purpose of the game is to see just how well you can make it through a 5 day week of the everyday life. Try your best to make the smartest decisions when it comes to managing your time. Depending on which of the 5 activities you chose, you will receive a certain amount of points. By the end of the 5 days at college, you will receive a score which allows you to see how successful you were! Good Luck and Choose Wisely!');">HELP! - Instructions</button>
 
  <div id="inputDiv">
@@ -33,9 +36,12 @@
     <label for="dayBox">Days until finals:</label>
     <input type="text" id="dayBox">
     <br>
+    <br>
     <button onclick="createUser();">Begin School</button>
   </div>
-  
+
+</center> 
+ 
   <div id="buttonDiv" style="display:none">
   <button onclick="userEat();">Eat</button>
   <button onclick="userStudy();">Study</button>
