@@ -4,7 +4,6 @@ var totalscore = 0;
 var day = 1;
 var LASTDAY = 5;
 
-<<<<<<< HEAD
 function counterA()
 {
 	if(x>=5)
@@ -32,14 +31,13 @@ function getTotalScore()
 		alert("Your total score is " + totalscore + ".");
 	}
 } 
-=======
+
 
 function showGameStatus()
 {		
 	alert("Today is day " + day + "." + " You have done " + activites + " activities today out of 5 for a total of " + score + " points.");
 	
 }
->>>>>>> 36b99404115f8e82a0ae6e5db92e41277e91805d
 
 /*CHECK FOR END OF GAME
 
@@ -112,21 +110,7 @@ function userEat()
 	"Where would you like to go to eat?" 
 	//Show Eat
 	document.getElementById("eatDiv").style.display="block"
-<<<<<<< HEAD
-	if(score>=totalday)
-	{
-		day++;
-		alert("Today is day " + day + "." + " You have reach the daily score of " + totalday + ".");
-		totalscore = totalscore + score;
-				score = 0;
-	} 
-	if(day = 5)
-	{
-		alert("You have reached finals. Your total score is " + totalscore + ".");
-	}
-=======
 
->>>>>>> 36b99404115f8e82a0ae6e5db92e41277e91805d
 }
 //Send the user to STUDY
 function userStudy()
@@ -250,26 +234,11 @@ function ministry()
 {
 	//hide choice buttons
 	document.getElementById("clubDiv").style.display="none"
-<<<<<<< HEAD
-	score++;
-	x++;
-
-	if(score>=totalday)
-	{
-		day++; alert("You have reached day " + day + ".");
-		totalscore = totalscore + score;	
-		score = 0;
-	} 
-	if(day>=totalday)
-	{
-		alert("You have reached finals. Your total score is " + totalscore + ".");
-	}
-=======
 	//Display message
 	displayMessage("You volunteered for community service.");
 	//check score, activities, and for the end of day
 	endActivity(4);
->>>>>>> 36b99404115f8e82a0ae6e5db92e41277e91805d
+
 }
 function computer()
 {
