@@ -42,7 +42,7 @@ function endActivity( points ) {
 }
 
 function endofGame() {
-	if (day = 6) {
+	if (day === 6) {
 		alert("You have finished the game! Click to the link to see your score!");
 	}
 	
@@ -169,6 +169,8 @@ function oneClass()
 	endActivity(2);
 	//Show Buttons
         document.getElementById("buttonDiv").style.display="block"
+        //check for end of game
+        endofGame();
 	
 	
 }
@@ -183,6 +185,8 @@ function allClasses()
 	endActivity(4);
 	//Show Buttons
         document.getElementById("buttonDiv").style.display="block"
+        //check for end of game
+        endofGame();
 	
 	
 }
@@ -197,6 +201,8 @@ function noClasses()
 	endActivity(0);
 	//Show Buttons
         document.getElementById("buttonDiv").style.display="block"
+        //check for end of game
+        endofGame();
 
 }
 
@@ -212,6 +218,8 @@ function soccer()
 	endActivity(2);
 	//Show Buttons
         document.getElementById("buttonDiv").style.display="block"
+        //check for end of game
+        endofGame();
 }
 
 function ministry()
@@ -224,6 +232,8 @@ function ministry()
 	endActivity(4);
 	//Show Buttons
         document.getElementById("buttonDiv").style.display="block"
+        //check for end of game
+        endofGame();
 
 }
 function computer()
@@ -236,6 +246,8 @@ function computer()
 	endActivity(3);
 	//Show Buttons
         document.getElementById("buttonDiv").style.display="block"
+        //check for end of game
+        endofGame();
 }
 
 //functions as to where you ate
@@ -250,6 +262,8 @@ function hall()
 	endActivity(3);
 	//Show Buttons
         document.getElementById("buttonDiv").style.display="block"
+        //check for end of game
+        endofGame();
 }
 function cab()
 {
@@ -261,6 +275,8 @@ function cab()
 	endActivity(2);
 	//Show Buttons
         document.getElementById("buttonDiv").style.display="block"
+        //check for end of game
+        endofGame();
 
 }
 function apple()
@@ -273,6 +289,8 @@ function apple()
 	endActivity(4);
 	//Show Buttons
         document.getElementById("buttonDiv").style.display="block"
+        //check for end of game
+        endofGame();
 }
 
 //functions as to where you hung out with friends
@@ -287,6 +305,8 @@ function friendsDorm()
 	endActivity(2);
 	//Show Buttons
         document.getElementById("buttonDiv").style.display="block"
+        //check for end of game
+        endofGame();
 }
 
 function theGreen()
@@ -299,6 +319,8 @@ function theGreen()
 	endActivity(3);
 	//Show Buttons
         document.getElementById("buttonDiv").style.display="block"
+        //check for end of game
+        endofGame();
 }
 
 function riverSide()
@@ -311,6 +333,8 @@ function riverSide()
 	endActivity(4);
 	//Show Buttons
         document.getElementById("buttonDiv").style.display="block"
+        //check for end of game
+        endofGame();
 }
 
 //functions where you worked on homework
@@ -325,6 +349,8 @@ function room()
 	endActivity(3);
 	//Show Buttons
         document.getElementById("buttonDiv").style.display="block"
+        //check for end of game
+        endofGame();
 }
 function sFriends()
 {
@@ -336,6 +362,8 @@ function sFriends()
 	endActivity(2);
 	//Show Buttons
         document.getElementById("buttonDiv").style.display="block"
+        //check for end of game
+        endofGame();
 
 }
 
@@ -348,5 +376,7 @@ function library() {
 	endActivity(4);	
 	//Show Buttons
         document.getElementById("buttonDiv").style.display="block"
+        //check for end of game
+        endofGame();
 }
 
