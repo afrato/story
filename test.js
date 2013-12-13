@@ -36,6 +36,7 @@ function endActivity( points ) {
         day = day + 1;
         alert("You have reached " + day + "!");   
 }
+}
 
 function endofGame() {
 	if (day = 6) {
