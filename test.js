@@ -9,9 +9,8 @@ function counterA()
 	if(x>=5)
 	{
 		alert("Today is day " + day + "." + " You have done " + totalday + " activities today.");
-		x++;
-		day++;
-		if(day>=x)
+		
+		if(day = 5)
 		{
 			alert("You have reached finals. Your total score is " + totalscore + ".");
 		}
@@ -23,7 +22,7 @@ function counterA()
 }
 function getTotalScore()
 {
-	if(day>=x)
+	if(day = 5)
 	{
 		alert("You have reached finals. Your total score is " + totalscore + ".");
 	}
@@ -81,7 +80,7 @@ function userEat()
 		totalscore = totalscore + score;
 				score = 0;
 	} 
-	if(day>=totalday)
+	if(day = 5)
 	{
 		alert("You have reached finals. Your total score is " + totalscore + ".");
 	}
@@ -372,7 +371,8 @@ function ministry()
 
 	if(score>=totalday)
 	{
-		day++; alert("You have reached day " + day + ".");	
+		day++; alert("You have reached day " + day + ".");
+		totalscore = totalscore + score;	
 		score = 0;
 	} 
 	if(day>=totalday)
