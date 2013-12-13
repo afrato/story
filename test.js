@@ -164,6 +164,8 @@ function oneClass()
 	displayMessage("You only attended one of your classes.");
 	//update score, activites, and check for end of day
 	endActivity(2);
+	//Show Buttons
+        document.getElementById("buttonDiv").style.display="block"
 	
 	
 }
@@ -176,6 +178,8 @@ function allClasses()
 	displayMessage("You attended all of your classes! Good Job!");
 	//update score, activities, and check for end of day
 	endActivity(4);
+	//Show Buttons
+        document.getElementById("buttonDiv").style.display="block"
 	
 	
 }
@@ -188,6 +192,8 @@ function noClasses()
 	displayMessage("You did not attend any of your classes! Try better next time!");
 	//update score, activities, and check for end of day
 	endActivity(0);
+	//Show Buttons
+        document.getElementById("buttonDiv").style.display="block"
 
 }
 
@@ -201,6 +207,8 @@ function soccer()
 	displayMessage("You chose to participate in soccer.");
 	//check score, activities, and for end of day
 	endActivity(2);
+	//Show Buttons
+        document.getElementById("buttonDiv").style.display="block"
 }
 
 function ministry()
@@ -211,6 +219,8 @@ function ministry()
 	displayMessage("You volunteered for community service.");
 	//check score, activities, and for the end of day
 	endActivity(4);
+	//Show Buttons
+        document.getElementById("buttonDiv").style.display="block"
 
 }
 function computer()
@@ -221,6 +231,8 @@ function computer()
 	displayMessage("Hope you had fun participating in Computer Society!");
 	//check score, activities, and for the end of day
 	endActviity(3);
+	//Show Buttons
+        document.getElementById("buttonDiv").style.display="block"
 }
 
 //functions as to where you ate
@@ -233,6 +245,8 @@ function hall()
 	displayMessage("You chose the Dining Hall for your meal!");
 	//check score, activities, and for the end of day
 	endActivity(3);
+	//Show Buttons
+        document.getElementById("buttonDiv").style.display="block"
 }
 function cab()
 {
@@ -242,6 +256,8 @@ function cab()
 	displayMessage("You decided on the Caberet to eat!");
 	//check score, activites, and for the end of day
 	endActivity(2);
+	//Show Buttons
+        document.getElementById("buttonDiv").style.display="block"
 
 }
 function apple()
@@ -252,6 +268,8 @@ function apple()
 	displayMessage("Applebee's was your food choice!");
 	//check score, activities, and for the end of the day
 	endActivity(4);
+	//Show Buttons
+        document.getElementById("buttonDiv").style.display="block"
 }
 
 //functions as to where you hung out with friends
@@ -264,6 +282,8 @@ function friendsDorm()
 	displayMessage("You are hanging out in your friend's room!");
 	//check score, activities, and for the end of the day
 	endActivity(2);
+	//Show Buttons
+        document.getElementById("buttonDiv").style.display="block"
 }
 
 function theGreen()
@@ -274,6 +294,8 @@ function theGreen()
 	displayMessage("You hung out with your friends on the beautiful campus green!");
 	//check score, activities, and for the end of the day
 	endActivity(3);
+	//Show Buttons
+        document.getElementById("buttonDiv").style.display="block"
 }
 
 function riverSide()
@@ -284,6 +306,8 @@ function riverSide()
 	displayMessage("You hung out with you friends on the Marist River front!");
 	//check score, activities, and for the end of the day
 	endActivity(4);
+	//Show Buttons
+        document.getElementById("buttonDiv").style.display="block"
 }
 
 //functions where you worked on homework
@@ -296,7 +320,8 @@ function room()
 	displayMessage("You chose to study in your room.");
 	//check score, activities, and for the end of the day
 	endActivity(3);
-	
+	//Show Buttons
+        document.getElementById("buttonDiv").style.display="block"
 }
 function sFriends()
 {
@@ -306,6 +331,8 @@ function sFriends()
 	displayMessage("You worked on homework with your friends.");
 	//check score, activities, and for the end of the day
 	endActivity(2);
+	//Show Buttons
+        document.getElementById("buttonDiv").style.display="block"
 
 }
 
@@ -316,5 +343,7 @@ function library() {
 	displayMessage("You studied in the library!");
 	//check score, activities, and for the end of the day
 	endActivity(4);	
+	//Show Buttons
+        document.getElementById("buttonDiv").style.display="block"
 }
 
