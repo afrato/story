@@ -1,9 +1,10 @@
 var score = 0;
+var activites = 0;
 var totalscore = 0;
 var day = 1;
-var totalday = 0;
-var x = 0;
+var LASTDAY = 5;
 
+<<<<<<< HEAD
 function counterA()
 {
 	if(x>=5)
@@ -31,10 +32,47 @@ function getTotalScore()
 		alert("Your total score is " + totalscore + ".");
 	}
 } 
+=======
 
+function showGameStatus()
+{		
+	alert("Today is day " + day + "." + " You have done " + activites + " activities today out of 5 for a total of " + score + " points.");
+	
+}
+>>>>>>> 36b99404115f8e82a0ae6e5db92e41277e91805d
 
+/*CHECK FOR END OF GAME
+
+//check if day is equal to 6. 
+
+*/
 
 var test = 1;
+
+// Function of display message
+
+function displayMessage ( str ) {
+ 
+    document.getElementById('outputDiv').innerHTML =
+        str + '<br><br>' + document.getElementById('outputDiv').innerHTML;
+} 
+// Function of the end activity
+
+function endActivity( points ) {
+	score = score + points;
+    	activities++;
+    	
+    if (activities === 5) {
+        day = day + 1;
+        alert("You have reached " + day + "!");   
+}
+
+function endofGame() {
+	if (day = 6) {
+		alert("You have finished the game! Your total score is");
+	}
+	
+}
 
 //Start the game
 function createUser()
@@ -44,35 +82,37 @@ function createUser()
 	//Get the user input
 	name: document.getElementById("nameBox").value,
 	dorm: document.getElementById("dormBox").value,
-	day: document.getElementById("dayBox").value,
 	}
-	totalday = document.getElementById("dayBox").value;
+	lastday = document.getElementById("dayBox").value;
 	//Display story line
 	document.getElementById("outputDiv").innerHTML =
 	"What would you like to do first?" +
 	"<br>" +
 	"Hello " + user.name + ", you have started your first day at Marist College!" +
 	" You are starting your first year in " + user.dorm + "." +
-	" You have made it through the entire semester and now you only have " + 
-	user.day + " days until finals, Good luck!";
+	" You have 5 days to make the smartest decisions possible for your college journey! These decisions will alter your success rate at Marist College! Good luck!";
 	//Hide Input
 	document.getElementById("inputDiv").style.display="none"
 	//Show Output
 	document.getElementById("outputDiv").style.display="block"
 	//Show Buttons
 	document.getElementById("buttonDiv").style.display="block"
+	//Hide Input
+	document.getElementById("inputDiv").style.display="none"
+	//Show Output
+	document.getElementById("questionDiv").style.display="block"
 }
 //Send the user to EAT
 function userEat()
 {	
-	//Display story line
-	document.getElementById("outputDiv").innerHTML =
-	"Where would you like to go?" +
-	"<br><br>" + document.getElementById("outputDiv").innerHTML
-	//Hide Buttons
+	//hide activity buttons
 	document.getElementById("buttonDiv").style.display="none"
+	//display question
+	document.getElementById("questionDiv").innerHTML =
+	"Where would you like to go to eat?" 
 	//Show Eat
 	document.getElementById("eatDiv").style.display="block"
+<<<<<<< HEAD
 	if(score>=totalday)
 	{
 		day++;
@@ -84,86 +124,48 @@ function userEat()
 	{
 		alert("You have reached finals. Your total score is " + totalscore + ".");
 	}
+=======
+
+>>>>>>> 36b99404115f8e82a0ae6e5db92e41277e91805d
 }
 //Send the user to STUDY
 function userStudy()
 {
-	//Display story line
-	document.getElementById("outputDiv").innerHTML =
-	"Where would you like to go?" +
-	"<br><br>" + document.getElementById("outputDiv").innerHTML
-	//Hide Buttons
+	//hide activity buttons
 	document.getElementById("buttonDiv").style.display="none"
+	//Display story line
+	document.getElementById("questionDiv").innerHTML =
+	"Where would you like to study?"
 	//Show Study
 	document.getElementById("studyDiv").style.display="block"
-	if(score>=totalday)
-	{
-		day++;
-		alert("Today is day " + day + "." + " You have reach the daily score of " + totalday + ".");
-
-		totalscore = totalscore + score;
-				score = 0;
-	} 
-	if(day>=totalday)
-	{
-		alert("You have reached finals. Your total score is " + totalscore + ".");
-	}
 }
 //Send the user to CLUB
 function userClub()
 {
-	//Display story line
-	document.getElementById("outputDiv").innerHTML =
-	"Where would you like to go?" +
-	"<br><br>" + document.getElementById("outputDiv").innerHTML
 	//Hide Buttons
 	document.getElementById("buttonDiv").style.display="none"
+	//Ask questions
+	document.getElementById("questionDiv").innerHTML =
+	"What activity would you like to take part in?"
 	//Show Club
 	document.getElementById("clubDiv").style.display="block"
-
-	if(score>=totalday)
-	{
-		day++; 
-		alert("Today is day " + day + "." + " You have reach the daily score of " + totalday + ".");
-
-		totalscore = totalscore + score;
-				score = 0;
-	} 
-	if(day>=totalday)
-	{
-		alert("You have reached finals. Your total score is " + totalscore + ".");
-	}
 }
+
+
 //Send the user to CLASS
 function userClass()
 {
-	//Display story line
-	document.getElementById("outputDiv").innerHTML =
-	"Would you like to attend class?" +
-	"<br><br>" + document.getElementById("outputDiv").innerHTML
 	//Hide Buttons
 	document.getElementById("buttonDiv").style.display="none"
-	//Show Eat
+	//Display story line
+	document.getElementById("outputDiv").innerHTML =
+	"How many classes would you like to attend?" +
+	"<br><br>" + document.getElementById("outputDiv").innerHTML
+	//Show class
 	document.getElementById("classDiv").style.display="block"
-
-	if(score>=totalday)
-	{
-		day++;	
-		alert("Today is day " + day + "." + " You have reached day " + totalday + ".");
-		
-		totalscore = totalscore + score;
-				score = 0;
-	} 
-	if(day>=totalday)
-	{
-		alert("You have reached finals. Your total score is " + totalscore + ".");
-	}
 }
+	
 
-/*function dayDiv()
-{
-	document.getElementById("dayDiv").style.display=""
-}*/
 
 //Return to Menu
 function back()
@@ -178,194 +180,77 @@ function back()
 	document.getElementById("studyDiv").style.display="none"
 	//Hide Study
 	document.getElementById("clubDiv").style.display="none"
-		score--;
-	x++;
-	 
-	if(score>=totalday)
-	{
-		alert("You have reached day " + totalday + ".");	
-		day++;
-		score = 0;
-	} 
-	if(day>=totalday)
-	{
-		alert("You have reached finals. Your total score is " + totalscore + ".");
-	}
+
 }
 //Send the user to HANG WITH FRIENDS
 function userFriends()
 {
-	//Display story line
-	document.getElementById("outputDiv").innerHTML =
-	"Where would you like to go to hang out with friends?" +
-	"<br><br>" + document.getElementById("outputDiv").innerHTML
 	//Hide Buttons
 	document.getElementById("buttonDiv").style.display="none"
+	
+	//Display story line
+	document.getElementById("questionDiv").innerHTML =
+	"Where would you like to go to hang out with friends?"
+
 	//Show Hang with friends
 	document.getElementById("friendsDiv").style.display="block"
-
-	if(score>=totalday)
-	{
-		day++; 
-		alert("You have reached day " + day + ".");
-		totalscore = totalscore + score;
-		score = 0;
-	} 
-	if(day>=totalday)
-	{
-		alert("You have reached finals. Your total score is " + totalscore + ".");
-	}
 }
-//can take part in 5 activities per day
-//after 5 activities, the next day starts
-/*function time()
-{
-	//Global Variable
-	var time = 1
-	while(time>5)
-	{
-		//var x = getElementById.value(time);
-		alert("Today is Day " + time);
-		time++;
-	}
-} */
 
-function mathClass()
+
+//going to class functions
+
+function oneClass()
 {
-	//Display story line
-	document.getElementById("outputDiv").innerHTML =
-	"What would you like to do now?" +
-	"<br> You attended your Math class!" +
-	"<br> 2 hours of your time was spent doing so." +
-	"<br><br>" + document.getElementById("outputDiv").innerHTML;
-	//Show Output
-	document.getElementById("outputDiv").style.display="block"
-	//Show Buttons
-	document.getElementById("buttonDiv").style.display="block"
-	//Hide Study
+	//hide choice buttons
 	document.getElementById("classDiv").style.display="none"
-		score++;
-	x++;
-
+	//display message
+	displayMessage("You only attended one of your classes.");
+	//update score, activites, and check for end of day
+	endActivity(2);
 	
-	if(score>=totalday)
-	{
-		day++;
-		alert("You have reached day " + day + ".");	
-		totalscore = totalscore + score;
-		score = 0;
-	} 
-	if(day>=totalday)
-	{
-		alert("You have reached finals. Your total score is " + totalscore + ".");
-	}
+	
 }
 
-function engClass()
+function allClasses()
 {
-	//Display story line
-	document.getElementById("outputDiv").innerHTML =
-	"What would you like to do now?" +
-	"<br> You attended your English class!" +
-	"<br> 2 hours of your time was spent doing so." + 
-	"<br><br>" + document.getElementById("outputDiv").innerHTML;
-	//Show Output
-	document.getElementById("outputDiv").style.display="block"
-	//Show Buttons
-	document.getElementById("buttonDiv").style.display="block"
-	//Hide Study
+	//hide choice buttons
 	document.getElementById("classDiv").style.display="none"
-		score++;
-	x++;
-
-	if(score>=totalday)
-	{
-		day++;
-		alert("You have reached day " + day + ".");	
-		totalscore = totalscore + score;
-		score = 0;
-	} 
-	if(day>=totalday)
-	{
-		totalscore = totalscore + score;
-		alert("You have reached finals. Your total score is " + totalscore + ".");
-	}
+	//display message
+	displayMessage("You attended all of your classes! Good Job!");
+	//update score, activities, and check for end of day
+	endActivity(4);
+	
+	
 }
 
-function sciClass()
+function noClasses()
 {
-	//Display story line
-	document.getElementById("outputDiv").innerHTML =
-	"What would you like to do now?" +
-	"<br> You attended your Science class!" +
-	"<br> 2 hours of your time was spent doing so." +
-	"<br><br>" + document.getElementById("outputDiv").innerHTML;
-	//Show Output
-	document.getElementById("outputDiv").style.display="block"
-	//Show Buttons
-	document.getElementById("buttonDiv").style.display="block"
-	//Hide Study
-	documenst.getElementById("classDiv").style.display="none"
-	score++;
-	x++;
+	//hide choice buttons
+	document.getElementById("classDiv").style.display="none"
+	//display message
+	displayMessage("You did not attend any of your classes! Try better next time!");
+	//update score, activities, and check for end of day
+	endActivity(0);
 
-	if(score>=totalday)
-	{
-		day++;
-		alert("You have reached day " + day + ".");	
-		totalscore = totalscore + score;
-		score = 0;
-	} 
-	if(day>=totalday)
-	{
-		totalscore = totalscore + score;
-		alert("You have reached finals. Your total score is " + totalscore + ".");
-	}
 }
+
+//partaking in club or activities 
 
 function soccer()
 {
-	//Display story line
-	document.getElementById("outputDiv").innerHTML =
-	" What would you like to do?" +
-	"<br> You go to soccer practice." +
-	"<br><br>" + document.getElementById("outputDiv").innerHTML;
-	//Show Output
-	document.getElementById("outputDiv").style.display="block"
-	//Show Buttons
-	document.getElementById("buttonDiv").style.display="block"
-	//Hide Club
+	//hide choice buttons
 	document.getElementById("clubDiv").style.display="none"
-		score++;
-	x++;
-
-	if(score>=totalday)
-	{
-		day++;
-		alert("You have reached day " + day + ".");	
-		totalscore = totalscore + score;
-		score = 0;
-	} 
-	if(day>=totalday)
-	{
-		totalscore = totalscore + score;
-		alert("You have reached finals. Your total score is " + totalscore + ".");
-	}
+	//Display message
+	displayMessage("You chose to participate in soccer.");
+	//check score, activities, and for end of day
+	endActivity(2);
 }
 
 function ministry()
 {
-	//Display story line
-	document.getElementById("outputDiv").innerHTML =
-	" What would you like to do?" +
-	"<br> You volunteer for community service." +
-	"<br><br>" + document.getElementById("outputDiv").innerHTML;
-	//Show Output
-	document.getElementById("outputDiv").style.display="block"
-	//Show Buttons
-	document.getElementById("buttonDiv").style.display="block"
-	//Hide Club
+	//hide choice buttons
 	document.getElementById("clubDiv").style.display="none"
+<<<<<<< HEAD
 	score++;
 	x++;
 
@@ -379,323 +264,115 @@ function ministry()
 	{
 		alert("You have reached finals. Your total score is " + totalscore + ".");
 	}
+=======
+	//Display message
+	displayMessage("You volunteered for community service.");
+	//check score, activities, and for the end of day
+	endActivity(4);
+>>>>>>> 36b99404115f8e82a0ae6e5db92e41277e91805d
 }
 function computer()
 {
-	//Display story line
-	document.getElementById("outputDiv").innerHTML =
-	" What would you like to do?" +
-	"<br> Someone found the bug in your program!" +
-	"<br><br>" + document.getElementById("outputDiv").innerHTML;
-	//Show Output
-	document.getElementById("outputDiv").style.display="block"
-	//Show Buttons
-	document.getElementById("buttonDiv").style.display="block"
-	//Hide Club
+	//hide choice buttons
 	document.getElementById("clubDiv").style.display="none"
-		score++;
-	x++;
-
-	if(score>=totalday)
-	{
-		day++;
-		alert("You have reached day " + day + ".");	
-		totalscore = totalscore + score;
-		score = 0;
-	} 
-	if(day>=totalday)
-	{
-		totalscore = totalscore + score;
-		alert("You have reached finals. Your total score is " + totalscore + ".");
-	}
+	//display message
+	displayMessage("Hope you had fun participating in Computer Society!");
+	//check score, activities, and for the end of day
+	endActviity(3);
 }
+
+//functions as to where you ate
 
 function hall()
 {
-	//Display story line
-	document.getElementById("outputDiv").innerHTML =
-	" What would you like to do?" +
-	"<br> 2 hours have past and you are now satisfied." +
-	"<br><br>" + document.getElementById("outputDiv").innerHTML;
-	//Show Output
-	document.getElementById("outputDiv").style.display="block"
-	//Show Buttons
-	document.getElementById("buttonDiv").style.display="block"
-	//Hide Eat
+	//hide choice buttons
 	document.getElementById("eatDiv").style.display="none"
-	x++;
-	if(score>=totalday)
-	{
-		day++;
-		alert("You have reached day " + day + ".");	
-		totalscore = totalscore + score;
-		score = 0;
-	} 
-	if(day>=totalday)
-	{
-		totalscore = totalscore + score;
-		alert("You have reached finals. Your total score is " + totalscore + ".");
-	}
+	//display message
+	displayMessage("You chose the Dining Hall for your meal!");
+	//check score, activities, and for the end of day
+	endActivity(3);
 }
 function cab()
 {
-	//Display story line
-	document.getElementById("outputDiv").innerHTML =
-	"What would you like to do?" +
-	"<br> 2 hours have past, you spent $5 and you are now satisfied." +
-	"<br><br>" + document.getElementById("outputDiv").innerHTML;
-	//Show Output
-	document.getElementById("outputDiv").style.display="block"
-	//Show Buttons
-	document.getElementById("buttonDiv").style.display="block"
-	//Hide Eat
-	document.getElementById("eatDiv").style.display="none"
-x++;
-	if(score>=totalday)
-	{
-		day++;
-		alert("You have reached day " + day + ".");	
-		totalscore = totalscore + score;
-		score = 0;
-	} 
-	if(day>=totalday)
-	{
-		totalscore = totalscore + score;
-		alert("You have reached finals. Your total score is " + totalscore + ".");
-	}
+	//hide choice buttons
+	doument.getElementById("eatDiv").style.display="none"
+	//display message
+	displayMessage("You decided on the Caberet to eat!");
+	//check score, activites, and for the end of day
+	endActivity(2);
+
 }
 function apple()
 {
-	//Display story line
-	document.getElementById("outputDiv").innerHTML =
-	"What would you like to do?" +
-	"<br> 3 hours have past, you spent $12 and you are now satisfied." +
-	"<br><br>" + document.getElementById("outputDiv").innerHTML;
-	//Show Output
-	document.getElementById("outputDiv").style.display="block"
-	//Show Buttons
-	document.getElementById("buttonDiv").style.display="block"
-	//Hide Eat
+	//hide choice buttons
 	document.getElementById("eatDiv").style.display="none"
-	x++;
-	//add 4 points
-	var apple = 4
-
-	if(score>=totalday)
-	{
-		day++;
-		alert("You have reached day " + day + ".");	
-		totalscore = totalscore + score;
-		score = 0;
-	} 
-	if(day>=totalday)
-	{
-		totalscore = totalscore + score;
-		alert("You have reached finals. Your total score is " + totalscore + ".");
-	}
+	//display message
+	displayMessage("Applebee's was your food choice!");
+	//check score, activities, and for the end of the day
+	endActivity(4);
 }
+
+//functions as to where you hung out with friends
 
 function friendsDorm()
 {
-	//Display story line
-	document.getElementById("outputDiv").innerHTML =
-	"What would you like to do now?" +
-	"<br> You hung out with your friends in their dorm room!" +
-	"<br> 4 hours of your time was spent doing so." +
-	"<br><br>" + document.getElementById("outputDiv").innerHTML;
-	//Show Output
-	document.getElementById("outputDiv").style.display="block"
-	//Show Buttons
-	document.getElementById("buttonDiv").style.display="block"
-	//Hide Hang with friends
+	//hide choice buttons
 	document.getElementById("friendsDiv").style.display="none"
-		score--;
-	x++;
-	if(score>=totalday)
-	{
-		day++;
-		alert("You have reached day " + day + ".");	
-		totalscore = totalscore + score;
-		score = 0;
-	} 
-	if(day>=totalday)
-	{
-		totalscore = totalscore + score;
-		alert("You have reached finals. Your total score is " + totalscore + ".");
-	}
+	//display message
+	displayMessage("You are hanging out in your friend's room!");
+	//check score, activities, and for the end of the day
+	endActivity(2);
 }
 
 function theGreen()
 {
-	//Display story line
-	document.getElementById("outputDiv").innerHTML =
-	"What would you like to do now?" +
-	"<br> You hung out with your friends on the beautiful campus green!" +
-	"<br> 4 hours of your time was spent doing so." +
-	"<br><br>" + document.getElementById("outputDiv").innerHTML;
-	//Show Output
-	document.getElementById("outputDiv").style.display="block"
-	//Show Buttons
-	document.getElementById("buttonDiv").style.display="block"
-	//Hide Hang with friends
+	//hide choice buttons
 	document.getElementById("friendsDiv").style.display="none"
-		score--;
-	x++;
-	if(score>=totalday)
-	{
-		day++;
-		alert("You have reached day " + day + ".");	
-		totalscore = totalscore + score;
-		score = 0;
-	} 
-	if(day>=totalday)
-	{
-		totalscore = totalscore + score;
-		alert("You have reached finals. Your total score is " + totalscore + ".");
-	}
+	//display message
+	displayMessage("You hung out with your friends on the beautiful campus green!");
+	//check score, activities, and for the end of the day
+	endActivity(3);
 }
 
 function riverSide()
 {
-	//Display story line
-	document.getElementById("outputDiv").innerHTML =
-	"What would you like to do now?" +
-	"<br> You hung out with your friends by the river!" +
-	"<br> 4 hours of your time was spent doing so." +
-	"<br><br>" + document.getElementById("outputDiv").innerHTML;
-	//Show Output
-	document.getElementById("outputDiv").style.display="block"
-	//Show Buttons
-	document.getElementById("buttonDiv").style.display="block"
-	//Hide Hang with Friends
+	//hide choice buttons
 	document.getElementById("friendsDiv").style.display="none"
-		score--;
-	x++;
-	if(score>=totalday)
-	{
-		day++;
-		alert("You have reached day " + day + ".");	
-		totalscore = totalscore + score;
-		score = 0;
-	} 
-	if(day>=totalday)
-	{
-		totalscore = totalscore + score;
-		alert("You have reached finals. Your total score is " + totalscore + ".");
-	}
+	//display message
+	displayMessage("You hung out with you friends on the Marist River front!");
+	//check score, activities, and for the end of the day
+	endActivity(4);
 }
+
+//functions where you worked on homework
 
 function room()
 {
-	//Display story line
-	document.getElementById("outputDiv").innerHTML =
-	" What would you like to do?" +
-	"<br> Good job! You studied for 3 hours." +
-	"<br><br>" + document.getElementById("outputDiv").innerHTML;
-	//Show Output
-	document.getElementById("outputDiv").style.display="block"
-	//Show Buttons
-	document.getElementById("buttonDiv").style.display="block"
-	//Hide Study
+	//hide choice buttons
 	document.getElementById("studyDiv").style.display="none"
-		score++;
-	x++;
-
-	if(score>=totalday)
-	{
-		day++;
-		alert("You have reached day " + day + ".");	
-		totalscore = totalscore + score;
-		score = 0;
-	} 
-	if(day>=totalday)
-	{
-		totalscore = totalscore + score;
-		alert("You have reached finals. Your total score is " + totalscore + ".");
-	}
+	//display message
+	displayMessage("You chose to study in your room.");
+	//check score, activities, and for the end of the day
+	endActivity(3);
+	
 }
 function sFriends()
 {
-	//Display story line
-	document.getElementById("outputDiv").innerHTML =
-	" What would you like to do?" +
-	"<br> You worked on homework with your friends for 4 hours." +
-	"<br><br>" + document.getElementById("outputDiv").innerHTML;
-	//Show Output
-	document.getElementById("outputDiv").style.display="block"
-	//Show Buttons
-	document.getElementById("buttonDiv").style.display="block"
-	//Hide Study
+	//hide choice buttons
 	document.getElementById("studyDiv").style.display="none"
-		score++;
-	x++;
+	//display message
+	displayMessage("You worked on homework with your friends.");
+	//check score, activities, and for the end of the day
+	endActivity(2);
 
-	if(score>=totalday)
-	{
-		day++;
-		alert("You have reached day " + day + ".");	
-		totalscore = totalscore + score;
-		score = 0;
-	} 
-	if(day>=totalday)
-	{
-		totalscore = totalscore + score;
-		alert("You have reached finals. Your total score is " + totalscore + ".");
-	}
-}
-function sFriends()
-{
-	//Display story line
-	document.getElementById("outputDiv").innerHTML =
-	" What would you like to do?" +
-	"<br> You worked on homework with your friends for 4 hours." +
-	"<br><br>" + document.getElementById("outputDiv").innerHTML;
-	//Show Output
-	document.getElementById("outputDiv").style.display="block"
-	//Show Buttons
-	document.getElementById("buttonDiv").style.display="block"
-	//Hide Study
-	document.getElementById("studyDiv").style.display="none"
-		score++;
-	x++;
-
-	if(score>=totalday)
-	{
-		day++;
-		alert("You have reached day " + day + ".");	
-		totalscore = totalscore + score;
-		score = 0;
-	} 
-	if(day>=totalday)
-	{
-		totalscore = totalscore + score;
-		alert("You have reached finals. Your total score is " + totalscore + ".");
-	}
 }
 
 function library()
 {
-	//Display story line
-	document.getElementById("outputDiv").innerHTML =
-	"What would you like to do?" +
-	"<br> Way to go! You studied in the Library for 3 hours." +
-	"<br><br>" + document.getElementById("outputDiv").innerHTML;
-	//Show Output
-	document.getElementById("outputDiv").style.display="block"
-	//Show Buttons
-	document.getElementById("buttonDiv").style.display="block"
-	//Hide Study
+	//hide choice buttons
 	document.getElementById("studyDiv").style.display="none"
-		score++;
-	x++;
-
-	if(score>=totalday)
-	{
-		day++; alert("You have reached day " + day + ".");	
-		score = 0;
-	} 
-	if(day>=totalday)
-	{
-		alert("You have reached finals. Your total score is " + totalscore + ".");
-	}
+	//display message
+	displayMessage("You studied in the library!");
+	//check score, activities, and for the end of the day
+	endActivity(4);
 }
