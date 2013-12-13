@@ -251,7 +251,7 @@ function hall()
 function cab()
 {
 	//hide choice buttons
-	doument.getElementById("eatDiv").style.display="none"
+	document.getElementById("eatDiv").style.display="none"
 	//display message
 	displayMessage("You decided on the Caberet to eat!");
 	//check score, activites, and for the end of day
