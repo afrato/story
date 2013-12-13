@@ -34,13 +34,16 @@ function endActivity( points ) {
     	
     if (activities === 5) {
         day = day + 1;
-        alert("You have reached " + day + "!");   
+        alert("You have reached day " + day + "!");
+        activities = 0;
+        
+       
 }
 }
 
 function endofGame() {
 	if (day = 6) {
-		alert("You have finished the game! Your total score is");
+		alert("You have finished the game! Click to the link to see your score!");
 	}
 	
 }
