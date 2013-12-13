@@ -4,34 +4,6 @@ var totalscore = 0;
 var day = 1;
 var LASTDAY = 5;
 
-function counterA()
-{
-	if(x>=5)
-	{
-		alert("Today is day " + day + "." + " You have done " + totalday + " activities today.");
-		
-		if(day = 5)
-		{
-			alert("You have reached finals. Your total score is " + totalscore + ".");
-		}
-	} 
-	else if(x<=5)
-	{
-		alert("Today is day " + day + "." + " You have done " + score + " activities today out of 5.");
-	}
-}
-function getTotalScore()
-{
-	if(day = 5)
-	{
-		alert("You have reached finals. Your total score is " + totalscore + ".");
-	}
-	else
-	{
-		alert("Your total score is " + totalscore + ".");
-	}
-} 
-
 
 function showGameStatus()
 {		
