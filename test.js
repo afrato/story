@@ -1,5 +1,5 @@
 var score = 0;
-var activites = 0;
+var activities = 0;
 var totalscore = 0;
 var day = 1;
 var LASTDAY = 5;
@@ -30,7 +30,7 @@ function displayMessage ( str ) {
 
 function endActivity( points ) {
 	score = score + points;
-    	activites++;
+    	activities++;
     	
     if (activities === 5) {
         day = day + 1;
