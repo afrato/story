@@ -43,7 +43,7 @@ function endActivity( points ) {
 
 function endofGame() {
 	if (day === 6) {
-		alert("You have finished the game! Click to the link to see your score!");
+		alert("You have finished the game! Click to the link to see your score! Refresh the page to play again!");
 	}
 	
 }
