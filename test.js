@@ -317,3 +317,4 @@ function library()
 	//check score, activities, and for the end of the day
 	endActivity(4);
 }
+}
