@@ -230,7 +230,7 @@ function computer()
 	//display message
 	displayMessage("Hope you had fun participating in Computer Society!");
 	//check score, activities, and for the end of day
-	endActviity(3);
+	endActivity(3);
 	//Show Buttons
         document.getElementById("buttonDiv").style.display="block"
 }
