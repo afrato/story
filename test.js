@@ -7,7 +7,7 @@ var LASTDAY = 5;
 
 function showGameStatus()
 {		
-	alert("Today is day " + day + "." + " You have done " + activities + " activities today out of 5 for a total of " + score + " points.");
+	alert("Today is day " + day + "." + " You have done " + activities + " activities today and have a total of " + score + " points out of 100.");
 	
 }
 
