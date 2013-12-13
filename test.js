@@ -315,6 +315,5 @@ function library()
 	//display message
 	displayMessage("You studied in the library!");
 	//check score, activities, and for the end of the day
-	endActivity(4);
-}
-}
+	endActivity(4);	}
+
