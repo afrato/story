@@ -54,7 +54,7 @@ function createUser()
 	name: document.getElementById("nameBox").value,
 	dorm: document.getElementById("dormBox").value,
 	}
-	lastday = document.getElementById("dayBox").value;
+
 	//Display story line
 	document.getElementById("outputDiv").innerHTML =
 	"What would you like to do first?" +
