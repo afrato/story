@@ -30,7 +30,7 @@ function displayMessage ( str ) {
 
 function endActivity( points ) {
 	score = score + points;
-    	activities++;
+    	activites++;
     	
     if (activities === 5) {
         day = day + 1;
